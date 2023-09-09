@@ -28,6 +28,13 @@ if (VTK_IOS_BUILD)
   return()
 endif()
 
+option(VTK_VISIONOS_BUILD "Build vtk.framework for visionos" OFF)
+mark_as_advanced(VTK_VISIONOS_BUILD)
+if (VTK_VISIONOS_BUILD)
+  include(vtkvisionOS)
+  return()
+endif()
+
 option(VTK_ANDROID_BUILD "Build VTK for Android" OFF)
 mark_as_advanced(VTK_ANDROID_BUILD)
 if (VTK_ANDROID_BUILD)
