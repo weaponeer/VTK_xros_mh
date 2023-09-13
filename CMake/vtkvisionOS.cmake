@@ -74,6 +74,7 @@ macro(compile_vtk_tools)
       -DBUILD_SHARED_LIBS:BOOL=ON
       -DVTK_BUILD_EXAMPLES:BOOL=OFF
       -DVTK_BUILD_TESTING:BOOL=OFF
+      -DVTK_REQUIRE_LARGE_FILE_SUPPORT:BOOL=ON
       -DCMAKE_MAKE_PROGRAM:FILEPATH=${CMAKE_MAKE_PROGRAM}
   )
 endmacro()
@@ -177,6 +178,7 @@ set(ios_cmake_flags
   -DVTK_MODULE_ENABLE_VTK_RenderingImage:STRING=${enable_option_RenderingImage}
   -DVTK_MODULE_ENABLE_VTK_RenderingVolumeOpenGL2:STRING=${enable_option_RenderingVolumeOpenGL2}
   -DVTK_MODULE_ENABLE_VTK_RenderingLOD:STRING=${enable_option_RenderingLOD}
+  -DVTK_REQUIRE_LARGE_FILE_SUPPORT:BOOL=ON
   ${DICOM_OPTION}
 )
 
